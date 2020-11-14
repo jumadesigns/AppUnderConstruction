@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 export default function Tvmaze() {
-  const [apiData, setapiData] = useState("JSON Date will logged in console");
+  const [apiData, setapiData] = useState("JSON Data will logged in console");
   const [state, setState] = useState("");
   const inputChange = (event) => {
     //console.log(event.target.value);
@@ -14,6 +14,8 @@ export default function Tvmaze() {
     axios.get(`https://api.tvmaze.com/search/shows?q=${state}`).then((data) => {
       console.log(data.data);
       //setapiData(JSON.stringify(data.data));
+      /*this is the option to send the JSON Data to the window but 
+      i choose to send it to the console so it can come as a full object*/
     });
   };
   return (
