@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 export default function Tvmaze() {
-  const [apiData, setapiData] = useState("No data");
+  const [apiData, setapiData] = useState("JSON Date will logged in console");
   const [state, setState] = useState("");
   const inputChange = (event) => {
     //console.log(event.target.value);
